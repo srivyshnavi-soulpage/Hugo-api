@@ -1,0 +1,679 @@
+html,
+body {
+    height: 100%;
+    background-color: #eee;
+}
+
+.hugo-bg {
+    background: #262a35;
+    color: #fafafa;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.side-content {
+    height: 100%;
+    min-height: 100%;
+}
+
+.content {
+    min-height: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* login page */
+
+.login-container {
+    background-color: #262a35;
+    display: flex;
+    align-items: center;
+    height: 91%;
+}
+
+.hugo-first-card {
+    background-color: #696a6c52;
+    color: #eee;
+}
+
+.hugo-description {
+    font-size: 18px;
+}
+
+
+/* login page */
+
+
+/* webcam Modal */
+
+.webcam-circle {
+    border: 3px solid #4bac73;
+    width: 250px;
+    overflow: hidden;
+}
+
+.modal.fade.show {
+    background-color: #262a35;
+}
+
+.thankyou-message {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.check_notes {
+    background-color: #eee;
+    border: 2px solid #dcd8d8;
+}
+
+
+/* webcam modal  */
+
+
+/* Dashboard */
+
+.hugo-bg {
+    background-color: #262a35;
+}
+
+.green-bg {
+    background-color: #4bac73;
+    color: #fff;
+}
+
+.green-bg:hover {
+    color: #fff;
+}
+
+
+/* Icons sizing */
+
+.navbar-images {
+    max-height: 40px;
+    height: 40px;
+}
+
+.menu-icons {
+    width: 25px;
+    height: 30px;
+}
+
+.check-icons {
+    width: 35px;
+    height: 35px;
+}
+
+.card-icons {
+    height: 100px;
+    width: 100px;
+}
+
+.default-icons {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Icons Sizing */
+
+
+/* side menu */
+
+.menu-inactive {
+    display: none;
+}
+
+.side-menu {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.side-menu a {
+    color: inherit;
+}
+
+.side-menu a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.side-menu li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-left: 5px solid #262a35;
+}
+
+.side-menu li:first-child .menu-text {
+    padding-top: 5px;
+}
+
+.side-menu li.active {
+    border-left: 5px solid #4bac73;
+    width: 85%;
+    background-color: #fff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #4bac73 !important;
+}
+
+*/
+/* side menu */
+
+
+/* cards and cards text sizing */
+
+.custom-card {
+    border-radius: 10px !important;
+}
+
+
+/* first row cards */
+
+.timer.display-time {
+    font-size: 23px;
+}
+
+.req-date-value .letter_h,
+.req-date-value .letter_m,
+.req-date-value .letter_s {
+    font-size: 13px;
+}
+
+.letter_h,
+.letter_m,
+.letter_s {
+    font-size: 18px;
+}
+
+
+/* .countdown-section {
+  padding: 5px;
+}
+.countdown-amount {
+  font-size: 30px;
+}
+.countdown-period {
+  font-size: 20px;
+} */
+
+.check-text {
+    font-size: 20px;
+}
+
+
+/* first row cards */
+
+
+/* second row-cards */
+
+.dash-card-text {
+    font-size: 30px;
+}
+
+.last-login-time-format {
+    font-size: 11px;
+    display: inline-block;
+    word-break: break-word;
+    width: 0;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.last-login-date {
+    font-size: 13px;
+}
+
+
+/* second-row cards */
+
+
+/* third row cards*/
+
+.custom-scroll {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.holidays-card:last-child,
+.events-card:last-child,
+.birthdays-card:last-child {
+    border-bottom: none !important;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* third row cards*/
+
+
+/* cards sixing */
+
+
+/* Dashboard */
+
+
+/* Employee attendance */
+
+
+/* calendar */
+
+#month-calendar {
+    width: 100%;
+}
+
+#month-calendar .month {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.date-clickable {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.week-end {
+    color: red;
+}
+
+.today .date-clickable {
+    color: #4bac73;
+    font-weight: 600;
+    border: 2px solid;
+}
+
+.req-date-header {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.req-date-label {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.req-date-notes {
+    background-color: #eee;
+}
+
+.dummy-total-hours-div {
+    width: 60px;
+}
+
+.status-text {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+/* calendar */
+
+
+/* ticket types */
+
+.ticket-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-gap: 1rem;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+}
+
+.custom-btn {
+    height: 45px;
+    width: 46px;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.custom-btn:hover {
+    color: #fff;
+}
+
+.sickleave,
+.sickleave:hover {
+    background-color: #bba6b5;
+    color: #fff;
+}
+
+.personalleave,
+.personalleave:hover {
+    background-color: #1956f0;
+    color: #fff;
+}
+
+.vacation,
+.vacation:hover {
+    background-color: #ff800f;
+    color: #fff;
+}
+
+.workfromhome,
+.workfromhome:hover {
+    background-color: #b21566;
+    color: #fff;
+}
+
+.holiday,
+.holiday:hover {
+    background-color: #4f3961;
+    color: #fff;
+}
+
+.optionalholiday,
+.optionalholiday:hover {
+    background-color: #dcedc1;
+    color: #fff;
+}
+
+.compensationoff,
+.compensationoff:hover {
+    background-color: #ecce6d;
+    color: #fff;
+}
+
+.casualleave,
+.casualleave:hover {
+    background-color: #00a8cc;
+    color: #fff;
+}
+
+.halfday,
+.halfday:hover {
+    background-color: #b0a160;
+    color: #fff;
+}
+
+.maternity,
+.maternity:hover {
+    background-color: #ff6091;
+    color: #fff;
+}
+
+
+/* ticket types */
+
+
+/* Employee attendance */
+
+
+/* emplooyee profile */
+
+.form-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-avatar {
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-header {
+    opacity: 0.6;
+}
+
+.camera-icon {
+    position: relative;
+    top: 115px;
+    z-index: 1;
+    right: 80px;
+    color: #eee;
+}
+
+.profile-header.active {
+    color: #000 !important;
+    opacity: 1;
+}
+
+.profile-header:hover {
+    color: inherit;
+}
+
+.profile-header.active .active-line {
+    width: 35%;
+    border-bottom: 3px solid #4bac73;
+}
+
+.profile-fields label {
+    color: #6c757d;
+}
+
+.profile-fields input {
+    border: 1px solid #e6e6e6;
+}
+
+#employee-form ::placeholder {
+    color: #c8cace;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #4bac73;
+    background-color: #4bac73;
+}
+
+textarea {
+    resize: none;
+}
+
+.imgCircle {
+    border-radius: 50%;
+    border: 2px solid #4bac73;
+    width: 180px;
+    height: 180px;
+}
+
+#captureRef {
+    display: flex;
+}
+
+
+/* project styles */
+
+.custom-button-primary {
+    background-color: #4bac73;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+}
+
+.custom-card {
+    margin: 10px;
+}
+
+.custom-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.41px;
+    font-style: "normal";
+    color: #5C5D5D;
+    opacity: 50%;
+}
+
+.light-bg {
+    background: rgb(75, 172, 115, 0.3);
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.custom-date {
+    width: 40%;
+}
+
+.projects-worked-on-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    width: 70%;
+    margin-left: 0px;
+}
+
+.time-sheet-padding {
+    padding: 5px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.padding-border {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.bg {
+    background: #4bac73;
+    color: white;
+}
+
+.border-right {
+    border-right: solid 1px #4bac73 !important;
+}
+
+.align-center-col {
+    display: flex;
+    align-items: center;
+    flex-direction: col;
+    justify-content: center;
+}
+
+@media (max-width: 520px) {
+    #captureRef {
+        display: block;
+    }
+}
+
+.videoRef {
+    overflow: hidden;
+}
+
+#refImg {
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* employee profile */
+
+
+/* Tracker */
+
+.attendance-table thead {
+    background-color: #4bac73;
+    color: #fff;
+}
+
+.attendance-username {
+    text-align: left;
+    vertical-align: middle !important;
+}
+
+.staying-time {
+    font-size: 13px;
+    color: #c6b8b8;
+}
+
+.staying-timein-hours {
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+    display: block;
+}
+
+.tracker-table-data {
+    vertical-align: middle !important;
+}
+
+.tracker-employee-name:hover {
+    color: #4bac73;
+}
+
+
+/* Tracker */
+
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .menu-text {
+        display: none !important;
+    }
+    .side-menu li.active {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .side-menu .menu-icon,
+    .side-menu.active .menu-icon {
+        width: 50px;
+    }
+    .side-menu {
+        font-size: 16px;
+    }
+    .menu-text {
+        padding-left: 0px;
+    }
+}
+
+
+/* media queries */

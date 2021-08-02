@@ -1,0 +1,557 @@
+<html lang="en">
+
+<head>
+    <title>Hugo-Time To Grow</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/select.css">
+    <link rel="stylesheet" href="/static/css/timesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/static/js/timer.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md hugo-bg">
+        <a class="navbar-brand col-2" href="/"><img src="../hugo/static/images/hugo-logo.png" class="" height="60px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <style>
+            html,
+            body {
+                height: 100%;
+                background-color: #262a35;
+            }
+            
+            .hugo-container {
+                background-color: #696a6c52;
+            }
+            
+            .login-container {
+                height: 90%;
+            }
+            
+            .side-menu li.active {
+                border-left: 5px solid #4bac73;
+                width: 85%;
+                background-color: #fff;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                color: #4bac73 !important;
+            }
+            
+            .side-menu li {
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+                padding-top: 5px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                border-left: 5px solid #262a35;
+                border-left-width: 5px;
+                border-left-style: solid;
+                border-left-color: rgb(38, 42, 53);
+            }
+            
+            .menu-icons {
+                width: 25px;
+                height: 30px;
+            }
+            
+            img {
+                vertical-align: middle;
+                border-style: none;
+            }
+            
+            .form-avatar {
+                z-index: 1;
+                width: 150px;
+                height: 150px;
+            }
+            
+            .side-menu li:first-child .menu-text {
+                padding-top: 5px;
+            }
+            
+            .ml-3,
+            .mx-3 {
+                margin-left: 1rem!important;
+            }
+            
+            .mr-3,
+            .mx-3 {
+                margin-right: 1rem!important;
+            }
+            
+            *,
+             ::after,
+             ::before {
+                box-sizing: border-box;
+            }
+        </style>
+
+        <div class="navbar-collapse collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item text-white-50 pl-3 ">
+                    Hello Srivyshnavi Nallani chakravarthula! Welcome
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex align-items-center">
+                    <img src="../hugo/static/images/welcome-icon.svg" width="40px" height="40px" alt="" class="navbar-images">
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+
+
+                    <img src="../hugo/static/images/default-user-icon.svg" width="40px" height="40px" alt="" class="navbar-images">
+
+                </li>
+            </ul>
+            <ul class="navbar-nav ">
+                <li class="nav-item text-white-50 d-flex align-items-center mx-2">
+                    <span class="avatar-name mx-2">Srivyshnavi</span>
+                </li>
+                <a href="/api/logout/" class="d-flex align-items-center border-left ">
+                    <li class="nav-item mx-2 text-white-50 d-flex align-items-center">
+                        <span class="hugo-logout p-2">Logout </span>
+                        <img src="../hugo/static/images/logout-icon.svg" width="40px" height="40px" alt="" class="navbar-images">
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid content">
+        <div class="row side-content">
+            <aside class="hugo-bg col-2 p-0">
+                <ul class="side-menu p-0 m-0 text-secondary">
+                    <a href="/" class="  ">
+                        <li class="menu-item">
+                            <img src="../hugo/static/images/dashboard-icon-w.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <img src="../hugo/static/images/dashboard-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <span class="menu-text mx-3">Dashboard</span>
+                        </li>
+                    </a>
+                    <a href="/api/employee/" class="  ">
+                        <li class="menu-item">
+                            <img src="../hugo/static/images/activities-icon-w.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <img src="../hugo/static/images/activities-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <span class="menu-text mx-3">My Profile</span>
+                        </li>
+                    </a>
+                    <a href="/api/attendance/" class="  ">
+                        <li class="menu-item active">
+                            <img src="../hugo/static/images/myattendance-icon-w.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <img src="../hugo/static/images/myattendance-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <span class="menu-text mx-3">My Attendance</span>
+                        </li>
+                    </a>
+                    <a href="#" class="  ">
+                        <li class="menu-item">
+                            <img src="../hugo/static/images/myattendance-icon-w.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <img src="../hugo/static/images/myattendance-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <span class="menu-text mx-3">Leave Management</span>
+                        </li>
+                    </a>
+                    <a href="/api/timesheets/weekly/" class=" ">
+                        <li class="menu-item">
+                            <img src="../hugo/static/images/timesheet-icon.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <img src="../hugo/static/images/timesheet-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <span class="menu-text mx-3">Timesheets</span>
+                        </li>
+                    </a>
+
+                    <a href="/api/projects/" class=" ">
+                        <li class="menu-item">
+                            <img src="../hugo/static/images/projects-icon.svg" width="16px" height="16px" alt="" class="menu-icons">
+                            <img src="../hugo/static/images/projects-icon-green.svg" width="16px" height="16px" alt="" class="menu-icons menu-inactive">
+                            <span class="menu-text mx-3">Projects</span>
+                        </li>
+                    </a>
+
+
+                </ul>
+            </aside>
+
+            <div class="col-10 main-content">
+                <div>
+
+                    <div class="row pt-3">
+                        <div class="col-sm d-flex pt-3 "></div>
+                        <div class="col-sm-7 col-md-5 col-lg-4 col-xl-3 d-flex  ml-auto">
+                            <div class="card card-body flex-fill shadow p-2">
+                                <div class="d-flex align-items-center">
+                                    <!-- <div> -->
+                                    <img src="../hugo/static/images/timer-icon.svg" width="40px" height="40px" alt="" class="navbar-images">
+                                    <!-- </div> -->
+                                    <div class="d-flex align-items-center mx-auto">
+
+                                        <div id="display-time" class="timer display-time">
+                                            <span class="hours">0</span><span class="letter_h">H</span>
+                                            <span class="minutes">0</span><span class="letter_m">M</span>
+                                            <span class="seconds">0</span><span class="letter_s">S</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex ">
+                            <button class="btn d-flex align-items-center w-100 justify-content-center green-bg" data-toggle="modal" data-target=".web-cam">
+      
+      <img src="../hugo/static/images/checkin-icon.svg" width="16px" height="16px" alt="" class="check-icons">
+      
+      <button class="check-text mx-2">Checkin</button>
+                            </button>
+
+                            <div class="modal fade web-cam" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content text-center p-3 text-secondary">
+                                        <div class="modal-header border-0">
+                                            <h4 class="modal-title text-center w-100">
+                                                Checkin with Webcam
+                                            </h4>
+                                            <button type="button" class="close" data-dismiss="modal">
+          ×
+        </button>
+                                        </div>
+                                        <div class="rounded-circle d-flex justify-content-center align-items-center webcam-circle m-auto">
+                                            <video id="video" class="rounded-circle" autoplay="" height="250" width="450" webboost_found_paused="true" webboost_processed="true"></video>
+                                        </div>
+                                        <h4 class="pt-3">Srivyshnavi Nallani Chakravarthula</h4>
+                                        <span class="model-time-stamp">Time Stamp: 10:22:51, 30/07/2021 </span>
+                                        <div id="check-msg">
+                                            <input type="text" id="checkin_notes" class="check_notes m-1 mt-3 rounded-lg text-secondary p-3 w-100" placeholder="Checkin Notes">
+                                            <button class="btn green-bg m-1 p-2 w-100" id="checkin">
+          Checkin
+        </button>
+                                        </div>
+                                        <div id="status-message">
+                                            <canvas id="canvas" width="640" height="480" hidden="" disabled=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                function update_status() {
+                                    return $("#status-message").replaceWith(`<hr class="w-100">
+      <div class="d-flex align-items-center justify-content-center ">
+        <span class="thankyou-message ">Thankyou</span> 
+        <img src="../hugo/static/images/success-icon.svg" class="navbar-images">
+      </div>
+      <p>You have been <strong>Checkin</strong> successfully</p>
+       <button class="btn green-bg btn-lg pr-4 pl-4"  m-1" id="snap-modal-close">
+         Close
+       </button> `);
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+
+                    <script>
+                        function start_timer(worked_time) {
+                            var totalSecs = worked_time;
+                            var hours = Math.floor(totalSecs / 3600);
+                            var minutes = Math.floor((totalSecs % 3600) / 60);
+                            var seconds = totalSecs % 60;
+
+                            var timer = new Timer();
+                            timer.start({
+                                precision: "secondTenths",
+                                startValues: {
+                                    seconds: seconds,
+                                    minutes: minutes,
+                                    hours: hours
+                                }
+                            });
+                            timer.addEventListener("secondTenthsUpdated", function(e) {
+                                $("#display-time .hours").html(timer.getTimeValues().hours);
+                                $("#display-time .minutes").html(timer.getTimeValues().minutes);
+                                $("#display-time .seconds").html(timer.getTimeValues().seconds);
+                            });
+                        }
+                        if (`checkin` != "checkin") {
+                            start_timer(``);
+                        }
+                    </script>
+
+
+                    <div class="row pt-3">
+                        <div class="col-sm d-flex pt-3">
+                            <div class="card card-body flex-fill shadow">
+                                <div class="row d-flex p-2 align-items-center">
+                                    <div class="d-flex col-4 ">
+                                        <span class="req-date-header">Calendar</span>
+                                    </div>
+                                    <div class="d-flex ml-auto col-4">
+                                        <select class="custom-select custom-select-sm" id="input-month" name="month">
+            <option value="" selected="">Select month</option>
+            
+
+            <!--  -->
+            
+            <option value="1">January</option>
+            
+
+            <!--  -->
+            
+            <option value="2">February</option>
+            
+
+            <!--  -->
+            
+            <option value="3">March</option>
+            
+
+            <!--  -->
+            
+            <option value="4">April</option>
+            
+
+            <!--  -->
+            
+            <option value="5">May</option>
+            
+
+            <!--  -->
+            
+            <option value="6">June</option>
+            
+
+            <!--  -->
+            
+
+            <option value="7">July</option>
+            
+
+            <!--  -->
+            
+            <option value="8">August</option>
+            
+
+            <!--  -->
+            
+            <option value="9">September</option>
+            
+
+            <!--  -->
+            
+            <option value="10">October</option>
+            
+
+            <!--  -->
+            
+            <option value="11">November</option>
+            
+
+            <!--  -->
+            
+            <option value="12">December</option>
+            
+          </select>
+                                    </div>
+                                    <div class="d-flex col-4">
+                                        <select class="custom-select custom-select-sm" id="input-year" name="year">
+            <option value="" selected="">Select year</option>
+            <option>2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+                                    </div>
+                                </div>
+                                <div class="calendar d-flex justify-content-center p-2 ">
+                                    <table id="month-calendar" border="0" cellpadding="0" cellspacing="0" class="month">
+                                        <tbody>
+                                            <tr>
+                                                <th colspan="7" class="month">July 2021</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="mon">Mon</th>
+                                                <th class="tue">Tue</th>
+                                                <th class="wed">Wed</th>
+                                                <th class="thu">Thu</th>
+                                                <th class="fri">Fri</th>
+                                                <th class="sat">Sat</th>
+                                                <th class="sun">Sun</th>
+                                            </tr>
+                                            <tr>
+                                                <td width="85" height="65" class="noday"><a class="date-clickable None None" href="#">&nbsp;</a></td>
+                                                <td width="85" height="65" class="noday"><a class="date-clickable None None" href="#">&nbsp;</a></td>
+                                                <td width="85" height="65" class="noday"><a class="date-clickable None None" href="#">&nbsp;</a></td>
+                                                <td width="85" height="65" class="thu"><a class="date-clickable working-day absent" href="?date=1&amp;month=7&amp;year=2021">1</a></td>
+                                                <td width="85" height="65" class="fri"><a class="date-clickable working-day absent" href="?date=2&amp;month=7&amp;year=2021">2</a></td>
+                                                <td width="85" height="65" class="sat"><a class="date-clickable week-end week-end" href="?date=3&amp;month=7&amp;year=2021">3</a></td>
+                                                <td width="85" height="65" class="sun"><a class="date-clickable week-end week-end" href="?date=4&amp;month=7&amp;year=2021">4</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="85" height="65" class="mon"><a class="date-clickable working-day absent" href="?date=5&amp;month=7&amp;year=2021">5</a></td>
+                                                <td width="85" height="65" class="tue"><a class="date-clickable working-day absent" href="?date=6&amp;month=7&amp;year=2021">6</a></td>
+                                                <td width="85" height="65" class="wed"><a class="date-clickable working-day absent" href="?date=7&amp;month=7&amp;year=2021">7</a></td>
+                                                <td width="85" height="65" class="thu"><a class="date-clickable working-day absent" href="?date=8&amp;month=7&amp;year=2021">8</a></td>
+                                                <td width="85" height="65" class="fri"><a class="date-clickable working-day absent" href="?date=9&amp;month=7&amp;year=2021">9</a></td>
+                                                <td width="85" height="65" class="sat"><a class="date-clickable week-end week-end" href="?date=10&amp;month=7&amp;year=2021">10</a></td>
+                                                <td width="85" height="65" class="sun"><a class="date-clickable week-end week-end" href="?date=11&amp;month=7&amp;year=2021">11</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="85" height="65" class="mon"><a class="date-clickable working-day absent" href="?date=12&amp;month=7&amp;year=2021">12</a></td>
+                                                <td width="85" height="65" class="tue"><a class="date-clickable working-day absent" href="?date=13&amp;month=7&amp;year=2021">13</a></td>
+                                                <td width="85" height="65" class="wed"><a class="date-clickable working-day absent" href="?date=14&amp;month=7&amp;year=2021">14</a></td>
+                                                <td width="85" height="65" class="thu"><a class="date-clickable working-day absent" href="?date=15&amp;month=7&amp;year=2021">15</a></td>
+                                                <td width="85" height="65" class="fri"><a class="date-clickable working-day absent" href="?date=16&amp;month=7&amp;year=2021">16</a></td>
+                                                <td width="85" height="65" class="sat"><a class="date-clickable week-end week-end" href="?date=17&amp;month=7&amp;year=2021">17</a></td>
+                                                <td width="85" height="65" class="sun"><a class="date-clickable week-end week-end" href="?date=18&amp;month=7&amp;year=2021">18</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="85" height="65" class="mon"><a class="date-clickable working-day absent" href="?date=19&amp;month=7&amp;year=2021">19</a></td>
+                                                <td width="85" height="65" class="tue"><a class="date-clickable holiday holiday" href="?date=20&amp;month=7&amp;year=2021">20</a></td>
+                                                <td width="85" height="65" class="wed"><a class="date-clickable working-day absent" href="?date=21&amp;month=7&amp;year=2021">21</a></td>
+                                                <td width="85" height="65" class="thu"><a class="date-clickable working-day absent" href="?date=22&amp;month=7&amp;year=2021">22</a></td>
+                                                <td width="85" height="65" class="fri"><a class="date-clickable working-day absent" href="?date=23&amp;month=7&amp;year=2021">23</a></td>
+                                                <td width="85" height="65" class="sat"><a class="date-clickable week-end week-end" href="?date=24&amp;month=7&amp;year=2021">24</a></td>
+                                                <td width="85" height="65" class="sun"><a class="date-clickable week-end week-end" href="?date=25&amp;month=7&amp;year=2021">25</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="85" height="65" class="mon"><a class="date-clickable working-day absent" href="?date=26&amp;month=7&amp;year=2021">26</a></td>
+                                                <td width="85" height="65" class="tue"><a class="date-clickable working-day absent" href="?date=27&amp;month=7&amp;year=2021">27</a></td>
+                                                <td width="85" height="65" class="wed"><a class="date-clickable working-day absent" href="?date=28&amp;month=7&amp;year=2021">28</a></td>
+                                                <td width="85" height="65" class="thu"><a class="date-clickable working-day absent" href="?date=29&amp;month=7&amp;year=2021">29</a></td>
+                                                <td width="85" height="65" class="fri today"><a class="date-clickable working-day absent" href="?date=30&amp;month=7&amp;year=2021">30</a></td>
+                                                <td width="85" height="65" class="sat"><a class="date-clickable week-end -" href="?date=31&amp;month=7&amp;year=2021">31</a></td>
+                                                <td width="85" height="65" class="noday"><a class="date-clickable None None" href="#">&nbsp;</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm d-flex pt-3">
+
+                            <div class="card card-body flex-fill shadow justify-content-center align-items-center">
+                                <div class=" status-text">
+                                    WORKING-DAY
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="card card-body shadow">
+                            <ul class="ticket-types">
+                                <li>
+                                    <button class="btn rounded-circle custom-btn vacation">V</button>
+                                    <span class="pl-2">Vacation</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn sickleave">S</button>
+                                    <span class="pl-2">Sick Leave</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn personalleave">
+          P
+        </button>
+                                    <span class="pl-2">Personal Leave</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn holiday">H</button>
+                                    <span class="pl-2">Holiday</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn optionalholiday">
+          OH
+        </button>
+                                    <span class="pl-2">Optional Holiday</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn compensationoff">
+          CO
+        </button>
+                                    <span class="pl-2">Compensation Off</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn workfromhome">
+          WH
+        </button>
+                                    <span class="pl-2">Work From Home</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn halfday">HD</button>
+                                    <span class="pl-2">Half Day</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn casualleave">
+          C
+        </button>
+                                    <span class="pl-2">Casual Leave</span>
+                                </li>
+                                <li>
+                                    <button class="btn rounded-circle custom-btn maternity  ">
+          M/P
+        </button>
+                                    <span class="pl-2">Maternity/Paternity</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        function start_timer(worked_time) {
+                            var totalSecs = worked_time;
+                            var hours = Math.floor(totalSecs / 3600);
+                            var minutes = Math.floor((totalSecs % 3600) / 60);
+                            var seconds = totalSecs % 60;
+
+                            var timer = new Timer();
+                            timer.start({
+                                precision: "secondTenths",
+                                startValues: {
+                                    seconds: seconds,
+                                    minutes: minutes,
+                                    hours: hours
+                                }
+                            });
+                            timer.addEventListener("secondTenthsUpdated", function(e) {
+                                $("#display-time .hours").html(timer.getTimeValues().hours);
+                                $("#display-time .minutes").html(timer.getTimeValues().minutes);
+                                $("#display-time .seconds").html(timer.getTimeValues().seconds);
+                            });
+                        }
+                        if (`checkin` != "checkin") {
+                            start_timer(``);
+                        }
+                    </script>
+
+                </div>
+                <div class="footer w-100">
+                    <hr>
+                    <p class="m-0 text-center text-secondary">
+                        © Copyright Soulpage IT Solutions 2020. All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+</body>
+
+</html>
